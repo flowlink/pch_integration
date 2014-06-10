@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dataflo2.pchqas.com/B2B/Generic/DO.asmx?WSDL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4496'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.0
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 19 Nov 2012 15:47:58 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"
+        xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http:/schema.pchintl.com/dataflo/B2B/\"
+        xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+        xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http:/schema.pchintl.com/dataflo/B2B/\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema
+        elementFormDefault=\"qualified\" targetNamespace=\"http:/schema.pchintl.com/dataflo/B2B/\">\r\n
+        \     <s:element name=\"CreateDeliveryOrders\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"senderID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"checkString\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"companyID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"xmlPayload\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"CreateDeliveryOrdersResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"CreateDeliveryOrdersResult\" type=\"tns:Result_CreateDeliveryOrders\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"Result_CreateDeliveryOrders\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"Outcome\" type=\"tns:CreateDeliveryOrdersOutcome\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Msg\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SuccessfulOrdersList\"
+        type=\"tns:ArrayOfString\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"FailedOrdersList\" type=\"tns:ArrayOfString\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:simpleType name=\"CreateDeliveryOrdersOutcome\">\r\n
+        \       <s:restriction base=\"s:string\">\r\n          <s:enumeration value=\"Failed\"
+        />\r\n          <s:enumeration value=\"Completed\" />\r\n          <s:enumeration
+        value=\"CompletedWithErrors\" />\r\n        </s:restriction>\r\n      </s:simpleType>\r\n
+        \     <s:complexType name=\"ArrayOfString\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"string\" nillable=\"true\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \   </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"CreateDeliveryOrdersSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:CreateDeliveryOrders\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"CreateDeliveryOrdersSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:CreateDeliveryOrdersResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"DOSoap\">\r\n    <wsdl:operation
+        name=\"CreateDeliveryOrders\">\r\n      <wsdl:input message=\"tns:CreateDeliveryOrdersSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:CreateDeliveryOrdersSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"DOSoap\"
+        type=\"tns:DOSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"CreateDeliveryOrders\">\r\n      <soap:operation
+        soapAction=\"http:/schema.pchintl.com/dataflo/B2B/CreateDeliveryOrders\" style=\"document\"
+        />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:binding name=\"DOSoap12\"
+        type=\"tns:DOSoap\">\r\n    <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"CreateDeliveryOrders\">\r\n      <soap12:operation
+        soapAction=\"http:/schema.pchintl.com/dataflo/B2B/CreateDeliveryOrders\" style=\"document\"
+        />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <soap12:body use=\"literal\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"DO\">\r\n
+        \   <wsdl:port name=\"DOSoap\" binding=\"tns:DOSoap\">\r\n      <soap:address
+        location=\"https://dataflo.pchqas.com/B2B/Generic/DO.asmx\" />\r\n    </wsdl:port>\r\n
+        \   <wsdl:port name=\"DOSoap12\" binding=\"tns:DOSoap12\">\r\n      <soap12:address
+        location=\"https://dataflo.pchqas.com/B2B/Generic/DO.asmx\" />\r\n    </wsdl:port>\r\n
+        \ </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Mon, 19 Nov 2012 15:48:03 GMT
+- request:
+    method: post
+    uri: https://dataflo.pchqas.com/B2B/Generic/DO.asmx
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><env:Envelope xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:tns=\"http:/schema.pchintl.com/dataflo/B2B/\"
+        xmlns:env=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ins0=\"http:/schema.pchintl.com/dataflo/B2B/\"><env:Body><ins0:CreateDeliveryOrders><ins0:senderID>username</ins0:senderID><ins0:checkString>apassword</ins0:checkString><ins0:companyID>PCH</ins0:companyID><ins0:xmlPayload>&lt;?xml
+        version=&quot;1.0&quot;?&gt;\n&lt;DeliveryOrders xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        Action=&quot;Create&quot; xsi:noNamespaceSchemaLocation=&quot;http://schema.pchintl.com/DO/DO_1.0.xsd&quot;&gt;\n
+        \ &lt;DO&gt;\n    &lt;DN&gt;R209324552_H438105531460&lt;/DN&gt;\n    &lt;PODT&gt;2012-09-10&lt;/PODT&gt;\n
+        \   &lt;DCDT&gt;2012-09-10&lt;/DCDT&gt;\n    &lt;BAdr&gt;\n      &lt;Nm1&gt;Santina
+        Quitzon&lt;/Nm1&gt;\n      &lt;Adr1&gt;5819 Derick Club&lt;/Adr1&gt;\n      &lt;Adr2&gt;Suite
+        240&lt;/Adr2&gt;\n      &lt;City&gt;South William&lt;/City&gt;\n      &lt;Zip&gt;16804&lt;/Zip&gt;\n
+        \     &lt;State&gt;NY&lt;/State&gt;\n      &lt;Ctry&gt;US&lt;/Ctry&gt;\n      &lt;Phn&gt;1-252-515-0619
+        x9455&lt;/Phn&gt;\n      &lt;Cont&gt;Santina Quitzon&lt;/Cont&gt;\n    &lt;/BAdr&gt;\n
+        \   &lt;SAdr&gt;\n      &lt;Nm1&gt;Santina Quitzon&lt;/Nm1&gt;\n      &lt;Adr1&gt;5819
+        Derick Club&lt;/Adr1&gt;\n      &lt;Adr2&gt;Suite 240&lt;/Adr2&gt;\n      &lt;City&gt;South
+        William&lt;/City&gt;\n      &lt;Zip&gt;16804&lt;/Zip&gt;\n      &lt;State&gt;NY&lt;/State&gt;\n
+        \     &lt;Ctry&gt;US&lt;/Ctry&gt;\n      &lt;Phn&gt;1-252-515-0619 x9455&lt;/Phn&gt;\n
+        \     &lt;Cont&gt;Santina Quitzon&lt;/Cont&gt;\n    &lt;/SAdr&gt;\n    &lt;Ship&gt;\n
+        \     &lt;Car&gt;UPS&lt;/Car&gt;\n      &lt;Con&gt;WE&lt;/Con&gt;\n    &lt;/Ship&gt;\n
+        \   &lt;Itm&gt;\n      &lt;LN&gt;215054540&lt;/LN&gt;\n      &lt;Qty&gt;3&lt;/Qty&gt;\n
+        \     &lt;PN&gt;LB-BIT-w10-INVERTER-v03&lt;/PN&gt;\n      &lt;UOM&gt;EA&lt;/UOM&gt;\n
+        \   &lt;/Itm&gt;\n  &lt;/DO&gt;\n&lt;/DeliveryOrders&gt;\n</ins0:xmlPayload></ins0:CreateDeliveryOrders></env:Body></env:Envelope>"
+    headers:
+      Soapaction:
+      - ! '"http:/schema.pchintl.com/dataflo/B2B/CreateDeliveryOrders"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '2086'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '606'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.0
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 19 Nov 2012 15:48:00 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CreateDeliveryOrdersResponse
+        xmlns="http:/schema.pchintl.com/dataflo/B2B/"><CreateDeliveryOrdersResult><Outcome>Completed</Outcome><Msg>The
+        delivery orders have been successfully created.</Msg><SuccessfulOrdersList><string>R209324552_H438105531460</string></SuccessfulOrdersList><FailedOrdersList
+        /></CreateDeliveryOrdersResult></CreateDeliveryOrdersResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Mon, 19 Nov 2012 15:48:04 GMT
+recorded_with: VCR 2.2.2

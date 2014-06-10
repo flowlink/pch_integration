@@ -1,0 +1,435 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dataflo2.pchqas.com/B2B/Generic/SC.asmx?WSDL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '6293'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.0
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 10 Oct 2012 15:14:56 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"
+        xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http:/schema.pchintl.com/dataflo/B2B/\"
+        xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+        xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http:/schema.pchintl.com/dataflo/B2B/\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema
+        elementFormDefault=\"qualified\" targetNamespace=\"http:/schema.pchintl.com/dataflo/B2B/\">\r\n
+        \     <s:element name=\"GetShipmentConfirmationsByNextToken\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"senderID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"checkString\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"companyID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"nextToken\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetShipmentConfirmationsByNextTokenResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetShipmentConfirmationsByNextTokenResult\"
+        type=\"tns:Result_ShipmentConfirmationsByNextToken\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"Result_ShipmentConfirmationsByNextToken\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"XML\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"NextToken\" type=\"s:string\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"GetShipmentConfirmationsByDateRange\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"senderID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"checkString\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"companyID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"shipmentStartDate\" type=\"s:dateTime\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"shipmentEndDate\" type=\"s:dateTime\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetShipmentConfirmationsByDateRangeResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetShipmentConfirmationsByDateRangeResult\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message
+        name=\"GetShipmentConfirmationsByNextTokenSoapIn\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:GetShipmentConfirmationsByNextToken\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetShipmentConfirmationsByNextTokenSoapOut\">\r\n    <wsdl:part
+        name=\"parameters\" element=\"tns:GetShipmentConfirmationsByNextTokenResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetShipmentConfirmationsByDateRangeSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetShipmentConfirmationsByDateRange\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetShipmentConfirmationsByDateRangeSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetShipmentConfirmationsByDateRangeResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"SCSoap\">\r\n    <wsdl:operation
+        name=\"GetShipmentConfirmationsByNextToken\">\r\n      <wsdl:input message=\"tns:GetShipmentConfirmationsByNextTokenSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetShipmentConfirmationsByNextTokenSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetShipmentConfirmationsByDateRange\">\r\n
+        \     <wsdl:input message=\"tns:GetShipmentConfirmationsByDateRangeSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetShipmentConfirmationsByDateRangeSoapOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"SCSoap\"
+        type=\"tns:SCSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"GetShipmentConfirmationsByNextToken\">\r\n
+        \     <soap:operation soapAction=\"http:/schema.pchintl.com/dataflo/B2B/GetShipmentConfirmationsByNextToken\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetShipmentConfirmationsByDateRange\">\r\n      <soap:operation soapAction=\"http:/schema.pchintl.com/dataflo/B2B/GetShipmentConfirmationsByDateRange\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"SCSoap12\" type=\"tns:SCSoap\">\r\n    <soap12:binding
+        transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n    <wsdl:operation
+        name=\"GetShipmentConfirmationsByNextToken\">\r\n      <soap12:operation soapAction=\"http:/schema.pchintl.com/dataflo/B2B/GetShipmentConfirmationsByNextToken\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetShipmentConfirmationsByDateRange\">\r\n      <soap12:operation soapAction=\"http:/schema.pchintl.com/dataflo/B2B/GetShipmentConfirmationsByDateRange\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:service name=\"SC\">\r\n    <wsdl:port name=\"SCSoap\" binding=\"tns:SCSoap\">\r\n
+        \     <soap:address location=\"https://dataflo.pchqas.com/B2B/Generic/SC.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"SCSoap12\" binding=\"tns:SCSoap12\">\r\n
+        \     <soap12:address location=\"https://dataflo.pchqas.com/B2B/Generic/SC.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version:
+  recorded_at: Wed, 10 Oct 2012 15:14:56 GMT
+- request:
+    method: post
+    uri: https://dataflo.pchqas.com/B2B/Generic/SC.asmx
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http:/schema.pchintl.com/dataflo/B2B/"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http:/schema.pchintl.com/dataflo/B2B/"><env:Body><ins0:GetShipmentConfirmationsByNextToken><ins0:senderID>username</ins0:senderID><ins0:checkString>apassword</ins0:checkString><ins0:companyID>PCH</ins0:companyID><ins0:nextToken>0</ins0:nextToken></ins0:GetShipmentConfirmationsByNextToken></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"http:/schema.pchintl.com/dataflo/B2B/GetShipmentConfirmationsByNextToken"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '585'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Length:
+      - '4913'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.0
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 10 Oct 2012 15:14:58 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n<Envelope>\n
+        \ <Body>\n    <GetShipmentConfirmationsByNextTokenResponse>\n      <GetShipmentConfirmationsByNextTokenResult>\n
+        \       <XML>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;DeliveryConfirmations
+        xmlns:pchBase=\"http://schema.pchintl.com/pchBase_v1.0\" Action=\"Read\"&gt;\n
+        \ &lt;SC&gt;\n    &lt;SRef&gt;\n      &lt;RefV&gt;B2B&lt;/RefV&gt;\n      &lt;RefQ&gt;OrderType&lt;/RefQ&gt;\n
+        \   &lt;/SRef&gt;\n    &lt;DN&gt;H123456789&lt;/DN&gt;\n    &lt;AWB&gt;AWB12334&lt;/AWB&gt;\n
+        \   &lt;Car&gt;Ceva Logistics&lt;/Car&gt;\n    &lt;DoDt&gt;2012-11-26&lt;/DoDt&gt;\n
+        \   &lt;ShDt&gt;2012-11-30&lt;/ShDt&gt;\n    &lt;ShTm&gt;12:24:49  &lt;/ShTm&gt;\n
+        \   &lt;POE/&gt;\n    &lt;COO&gt;HKG&lt;/COO&gt;\n    &lt;Cus&gt;\n      &lt;Nm1&gt;Business
+        Namep&lt;/Nm1&gt;\n      &lt;Nm2/&gt;\n      &lt;Adr1&gt;4801 Street&lt;/Adr1&gt;\n
+        \     &lt;Adr2/&gt;\n      &lt;City&gt;Jacksonville&lt;/City&gt;\n      &lt;Cnty/&gt;\n
+        \     &lt;State&gt;FL&lt;/State&gt;\n      &lt;Zip&gt;32216&lt;/Zip&gt;\n
+        \     &lt;Ctry&gt;US&lt;/Ctry&gt;\n      &lt;Phn&gt;4444444444&lt;/Phn&gt;\n
+        \     &lt;Fax/&gt;\n      &lt;Email&gt;logistics@client.com&lt;/Email&gt;\n
+        \     &lt;Lang/&gt;\n    &lt;/Cus&gt;\n    &lt;Cnt&gt;\n      &lt;SSCC&gt;108105420101827639&lt;/SSCC&gt;\n
+        \     &lt;Qty&gt;192&lt;/Qty&gt;\n      &lt;Wgt&gt;252.9600&lt;/Wgt&gt;\n
+        \     &lt;Typ&gt;1&lt;/Typ&gt;\n      &lt;TrkNm&gt;LS000000000024903400&lt;/TrkNm&gt;\n
+        \     &lt;Itm&gt;\n        &lt;PN&gt;SamplePN1&lt;/PN&gt;\n        &lt;Lin&gt;1&lt;/Lin&gt;\n
+        \       &lt;Qty&gt;192&lt;/Qty&gt;\n        &lt;Wgt&gt;213.8880&lt;/Wgt&gt;\n
+        \       &lt;SN&gt;2IABB282SGUL&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUM&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUN&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUR&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUS&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUT&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUV&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUW&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUY&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGV0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGV1&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGV2&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGV3&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGV4&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGV5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGV6&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHFT&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHFU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHFV&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHFW&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHFX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHFY&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHFZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHG0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHG1&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHG2&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHG3&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHG4&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHG5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHG7&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHG9&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGB&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGC&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGD&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGJ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGK&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGL&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGM&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGR&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGS&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGT&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGV&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGW&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHGY&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHGZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHH0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHH1&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHH2&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHH3&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHH4&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHH5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHH6&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHH7&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHH8&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHH9&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHB&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHC&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHD&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHJ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHK&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHL&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHM&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHR&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHS&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHT&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHV&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHW&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHHY&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHHZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJ0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJ1&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJ3&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJ4&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJ5&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJ7&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJ8&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJ9&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJC&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJD&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJE&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJF&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJG&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJH&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJJ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJK&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJL&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJM&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHJP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHJQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHQP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHQQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHQR&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHQT&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHSE&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHSF&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHSH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHSK&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHST&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHSV&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHSW&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHT1&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHT3&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHT5&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SHT7&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SHTE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSK&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSL&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSM&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSQ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSR&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSS&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGST&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSU&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSV&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSW&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSX&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGT0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGT1&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGT2&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGT3&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGT4&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGT5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGT6&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGT7&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGT8&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGT9&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTB&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTC&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTD&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTH&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTK&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTS&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTT&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTU&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTW&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGTX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGTZ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGU0&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGU1&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGU2&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGU5&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGU6&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGU7&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGU9&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUD&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGUJ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGUK&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSB&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGSH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGSJ&lt;/SN&gt;\n
+        \     &lt;/Itm&gt;\n    &lt;/Cnt&gt;\n    &lt;Cnt&gt;\n      &lt;SSCC&gt;108105420101827646&lt;/SSCC&gt;\n
+        \     &lt;Qty&gt;192&lt;/Qty&gt;\n      &lt;Wgt&gt;252.9600&lt;/Wgt&gt;\n
+        \     &lt;Typ&gt;1&lt;/Typ&gt;\n      &lt;TrkNm&gt;LS000000000024903401&lt;/TrkNm&gt;\n
+        \     &lt;Itm&gt;\n        &lt;PN&gt;SamplePN1&lt;/PN&gt;\n        &lt;Lin&gt;1&lt;/Lin&gt;\n
+        \       &lt;Qty&gt;192&lt;/Qty&gt;\n        &lt;Wgt&gt;213.8880&lt;/Wgt&gt;\n
+        \       &lt;SN&gt;2IABB282SJ9H&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SJWU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SJWZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SJYF&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SJYG&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SJYN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK0E&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK0Y&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK16&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK1A&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK1G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK1M&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK1Z&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK2T&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK2Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3K&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3P&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3Q&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK73&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK74&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK75&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7A&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7C&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7E&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7H&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7J&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7K&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7L&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7M&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7N&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7P&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7Q&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7R&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7V&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7W&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK7X&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK7Z&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK80&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK81&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK82&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK83&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK84&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK86&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK87&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK88&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK89&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8C&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8D&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8E&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8F&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8H&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8J&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8K&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8L&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8N&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8P&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8Q&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8R&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8S&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8T&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8V&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8W&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8X&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK8Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK8Z&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK90&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK91&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK92&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK93&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK95&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK96&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK97&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK98&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK99&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK9A&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK9C&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK9D&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK9E&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK9F&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3R&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3S&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3T&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3U&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3V&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3X&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK3Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK3Z&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK40&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK41&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK42&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK44&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK46&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK47&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK48&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK49&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4B&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK4E&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4F&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK4G&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4H&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK4Q&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4S&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK4V&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4W&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK4X&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK4Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK54&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK57&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5D&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5G&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5H&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5J&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5K&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5L&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5M&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5N&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5P&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5Q&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5R&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5S&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5T&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5U&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5V&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5W&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5X&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK5Y&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK5Z&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK60&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK61&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK62&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK63&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK66&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK67&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK69&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6B&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6C&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6D&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6E&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6F&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6G&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6H&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6J&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6K&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6M&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6Q&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6S&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6T&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6U&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6V&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK6Y&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK6Z&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK71&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK72&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK9G&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SK9H&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SK9L&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKA4&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKA9&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKAF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKAK&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKAL&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKAR&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKAS&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKAU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKAZ&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKB1&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKB8&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKB9&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBD&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBE&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBF&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBH&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBL&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBM&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBN&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBR&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKBV&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKBZ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKC2&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKC3&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SKC5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SKCG&lt;/SN&gt;\n
+        \     &lt;/Itm&gt;\n    &lt;/Cnt&gt;\n    &lt;Cnt&gt;\n      &lt;SSCC&gt;108105420101827653&lt;/SSCC&gt;\n
+        \     &lt;Qty&gt;116&lt;/Qty&gt;\n      &lt;Wgt&gt;152.8300&lt;/Wgt&gt;\n
+        \     &lt;Typ&gt;1&lt;/Typ&gt;\n      &lt;TrkNm&gt;LS000000000024903402&lt;/TrkNm&gt;\n
+        \     &lt;Itm&gt;\n        &lt;PN&gt;SamplePN1&lt;/PN&gt;\n        &lt;Lin&gt;1&lt;/Lin&gt;\n
+        \       &lt;Qty&gt;116&lt;/Qty&gt;\n        &lt;Wgt&gt;129.2240&lt;/Wgt&gt;\n
+        \       &lt;SN&gt;2IABB162HTLP&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTMZ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTN0&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTNA&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTNB&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTNG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTNR&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTP2&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTP4&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTPX&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTQ1&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTQ4&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTQ5&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTQQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTQR&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTQU&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HTQX&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HTTL&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HU0P&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HU0R&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HU1F&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HU36&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HU42&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HU5G&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HV6D&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HV6F&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB162HV6S&lt;/SN&gt;\n        &lt;SN&gt;2IABB162HV72&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB212KWGU&lt;/SN&gt;\n        &lt;SN&gt;2IABB212KWH3&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB212KWHN&lt;/SN&gt;\n        &lt;SN&gt;2IABB212KWHV&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB212KWHX&lt;/SN&gt;\n        &lt;SN&gt;2IABB212KWKH&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB212KWKK&lt;/SN&gt;\n        &lt;SN&gt;2IABB212KWKM&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGPS&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGQK&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGR7&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGRK&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGRS&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGS8&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGVP&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGW5&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGW6&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGWC&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGWL&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGWS&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGWX&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGXG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGXN&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGXP&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGXY&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGY0&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGY5&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGY6&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGYB&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGYD&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGYN&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGYQ&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGYT&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGYX&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZ2&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZ3&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZ4&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZ8&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZA&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZB&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZC&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZD&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZE&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZG&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZN&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZS&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SGZU&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SGZV&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH02&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH03&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH05&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH08&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH09&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH0B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH0G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH0R&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH0T&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH0W&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH0X&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH10&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH14&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH16&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH1G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH1K&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH1Q&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH1Y&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH2C&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH2D&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH2J&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH2L&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH2M&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH30&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH31&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH35&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH3A&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH3B&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH3G&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH3J&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH3L&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH3Q&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH3U&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH3V&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH3Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH4E&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH4U&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH4X&lt;/SN&gt;\n
+        \       &lt;SN&gt;2IABB282SH4Y&lt;/SN&gt;\n        &lt;SN&gt;2IABB282SH6E&lt;/SN&gt;\n
+        \     &lt;/Itm&gt;\n    &lt;/Cnt&gt;\n  &lt;/SC&gt;\n&lt;/DeliveryConfirmations&gt;\n</XML>\n
+        \       <NextToken>49137</NextToken>\n      </GetShipmentConfirmationsByNextTokenResult>\n
+        \   </GetShipmentConfirmationsByNextTokenResponse>\n  </Body>\n</Envelope>\n"
+    http_version:
+  recorded_at: Wed, 10 Oct 2012 15:14:58 GMT
+recorded_with: VCR 2.2.2
